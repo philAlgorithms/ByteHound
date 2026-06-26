@@ -1,3 +1,0 @@
-sver { requests = 4999; lmserve = 2500; ost = "localhost";
-    port = 8081;
-}

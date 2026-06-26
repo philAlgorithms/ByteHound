@@ -1,3 +1,0 @@
-app {
-imits = { requestmits = {out_ms = 2500; };
-}

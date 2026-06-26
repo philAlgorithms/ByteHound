@@ -35,4 +35,6 @@ export UBSAN_OPTIONS="halt_on_error=1:print_stacktrace=1"
 
 "$BUILD_DIR/$FUZZER" -minimize_crash=1 -exact_artifact_path="$OUTPUT" "$ARTIFACT"
 
-"$ROOT/scripts/reproduce.sh" "$FUZZER" "$OUTPUT"
+if ! "$ROOT/scripts/reproduce.sh" "$FUZZER" "$OUTPUT"; then
+    echo "minimized artifact still reproduces the failure (expected for crash inputs)" >&2
+fi

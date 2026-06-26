@@ -1,5 +1,0 @@
-server {
-    ht = "";
-    port = 8080;
-    tl= ["api", "production"];
-    lts 

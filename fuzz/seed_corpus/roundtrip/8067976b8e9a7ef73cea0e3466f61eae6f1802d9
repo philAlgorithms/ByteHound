@@ -1,5 +1,0 @@
-server {
-    host = "localhost";limits = {
-     t = 8080;
-    tls = true;
-}

@@ -26,6 +26,12 @@ for entry in "${TARGETS[@]}"; do
     target="${entry%%:*}"
     corpus="${entry##*:}"
     prefix="$ARTIFACTS/${target}"
+    corpus_work="$ARTIFACTS/corpus-${target}"
+    rm -rf "$corpus_work"
+    mkdir -p "$corpus_work"
+    if compgen -G "$ROOT/$corpus/"* >/dev/null; then
+        cp -r "$ROOT/$corpus/"* "$corpus_work/"
+    fi
     echo "==> smoke fuzzing $target for ${DURATION}s"
     if ! "$BUILD_DIR/$target" \
         -max_total_time="$DURATION" \
@@ -34,7 +40,7 @@ for entry in "${TARGETS[@]}"; do
         -max_len=65536 \
         -dict="$ROOT/fuzz/tinycfg.dict" \
         -artifact_prefix="$prefix-" \
-        "$ROOT/$corpus"; then
+        "$corpus_work"; then
         status=1
     fi
 done

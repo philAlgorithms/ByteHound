@@ -1,5 +1,0 @@
-server {
-    host = "localhost";
-   s =      re 0000;
-        timeout_ms = 2500;]    };
-}

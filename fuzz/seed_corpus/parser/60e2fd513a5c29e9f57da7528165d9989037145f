@@ -1,3 +1,0 @@
-app {
-hmits = { requestts = { requestmits = {out_ms = 2500; };mits = {out_ms = 200; };
-}

@@ -1,4 +1,0 @@
-server {
-    host = "";
-    port = 8    tls = t;
-}

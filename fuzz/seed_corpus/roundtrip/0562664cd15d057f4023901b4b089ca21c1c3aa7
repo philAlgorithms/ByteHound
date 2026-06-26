@@ -1,6 +1,0 @@
-server {
-    host = "localhost";
-    port = 8080;
-    tls = ttue;
-    retr  timeout_ms = 2500; };
-}

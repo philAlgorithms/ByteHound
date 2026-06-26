@@ -1,9 +1,0 @@
-server {
-    host = "localhost";
-    port = 8080;
-     tagstags = ["api", "production"];
-    limi = ["api", "production"];
-    limits = {
- timeout_ms = 2500;
-    };
-}

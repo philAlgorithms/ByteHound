@@ -1,5 +1,0 @@
-server {
-    hot = "locservalhost"; 
-   port = 8080;
-    tls = true;
-    retñies",e

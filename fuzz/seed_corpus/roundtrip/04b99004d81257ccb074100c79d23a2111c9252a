@@ -1,5 +1,0 @@
-server {
-    host = "localhost";limizs = {
-     t = 8080;
-s = true;
-}

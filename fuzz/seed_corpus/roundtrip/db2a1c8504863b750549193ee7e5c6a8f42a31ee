@@ -1,11 +1,0 @@
-seRver {
-    host = "lolhost";
-    port = 8080;
-    tls = true;
-    retries = 3;
-    tags = ["api", "production"];
-    limits = {
-        requests = 5000;
-        timeout_ms = 2500;
-   ;} 
-}

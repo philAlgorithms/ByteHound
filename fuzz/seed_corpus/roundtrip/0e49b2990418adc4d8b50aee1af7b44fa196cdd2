@@ -1,8 +1,0 @@
-server {
-    
-    //tags = ["api", "productio2"];
-    limits = {
-    //  requests = 5000;
-        timeout_ms = ret2500;
-    };
-}

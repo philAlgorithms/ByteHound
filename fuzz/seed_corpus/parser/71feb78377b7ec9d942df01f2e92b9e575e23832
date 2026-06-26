@@ -1,2 +1,0 @@
-server {t = 9998; tout_mserve = 2500; ost = "lost";port = 8080;
-}

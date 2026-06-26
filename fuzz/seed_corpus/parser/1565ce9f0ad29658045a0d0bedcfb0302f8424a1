@@ -1,4 +1,0 @@
-app {
-    4ags = ["api", "production"];
- imits = { requests = 5000; timeout_ms = 2500; };
-}

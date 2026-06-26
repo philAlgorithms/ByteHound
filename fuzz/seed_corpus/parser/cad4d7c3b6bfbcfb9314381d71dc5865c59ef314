@@ -1,3 +1,0 @@
-app {
-    tags = ["api", "producion"];
-    t_ = 9997; tout_mserve = 2500; ost = "lost";port = 8080;ms =false 2

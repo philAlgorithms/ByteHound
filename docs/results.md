@@ -64,6 +64,7 @@ No AddressSanitizer or UndefinedBehaviorSanitizer crashes were attributed to `in
 
 1. **Parser nesting depth propagation** — inner object assignments always used depth 0; fixed by passing depth through `parse_assignment`. Regression: `parser_nested_depth_propagates_to_inner_assignments`.
 2. **Mutation fuzz harness iterator safety** — `fuzz_mutation_sequence` could dereference `end()` iterators; fixed with bounded `pick_entry` helper.
+3. **Mutation fuzz harness buffer read** — `make_key` read one byte past input when key length was zero; fixed empty-length handling.
 
 ## Educational legacy fixture (intentional)
 
