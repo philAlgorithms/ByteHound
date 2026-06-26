@@ -1,0 +1,9 @@
+server {
+    host  ="localhost";
+    port = 8080;
+    tls = true;
+    retries = 3;
+    tags = ["api", "production"];
+    limits = 2500;
+    };
+}

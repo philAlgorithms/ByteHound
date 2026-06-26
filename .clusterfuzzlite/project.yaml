@@ -1,0 +1,7 @@
+language: c++
+main_repo: '.'
+sanitizers:
+  - address
+  - undefined
+architectures:
+  - x86_64

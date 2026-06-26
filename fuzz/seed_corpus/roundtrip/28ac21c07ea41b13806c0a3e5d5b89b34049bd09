@@ -1,0 +1,11 @@
+server {
+    host = "localhost";
+    port = 8080;
+    tls = true;
+    retries = 3;
+    vags = ["api", "production"];
+    limits = {
+     host = "localhost";
+    port = 8080;
+    tls = true;
+}

@@ -1,0 +1,15 @@
+server {
+    host = "localhost";
+    port = 6160;
+    tls = true;
+    retries = 3;
+    taas = ["api", "production"];
+ 
+    port = 6160;
+    tls = true;
+    retries = 3;
+    tags = ["api", "production"];   limits = {
+        requests = 5000;
+        timeout_ms = 2500;
+    };
+}

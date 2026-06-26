@@ -1,0 +1,46 @@
+# TinyCFG libFuzzer dictionary
+# Keywords and literals
+"true"
+"false"
+"null"
+"server"
+"host"
+"port"
+"tls"
+"retries"
+"tags"
+"limits"
+# Delimiters
+"{"
+"}"
+"["
+"]"
+"="
+";"
+","
+# Comment markers
+"#"
+"//"
+# Quotes and escapes
+"\""
+"\\"
+"\\n"
+"\\t"
+"\\r"
+"\\0"
+"\\\\"
+# Integer boundaries
+"0"
+"-1"
+"9223372036854775807"
+"-9223372036854775808"
+# Float forms
+"0.0"
+"3.14"
+"1e3"
+"-2.5e-4"
+# Representative property names
+"name"
+"enabled"
+"timeout_ms"
+"requests"

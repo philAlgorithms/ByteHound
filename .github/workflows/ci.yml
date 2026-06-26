@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y clang cmake ninja-build
+
+      - name: Normal build and unit tests
+        run: |
+          cmake -S . -B build -G Ninja \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_CXX_COMPILER=clang++ \
+            -DTINYCFG_BUILD_TESTS=ON
+          cmake --build build
+          ctest --test-dir build --output-on-failure
+
+      - name: Sanitizer build and tests
+        run: |
+          cmake -S . -B build-sanitize -G Ninja \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_CXX_COMPILER=clang++ \
+            -DTINYCFG_BUILD_TESTS=ON \
+            -DTINYCFG_ENABLE_SANITIZERS=ON
+          cmake --build build-sanitize
+          export ASAN_OPTIONS=halt_on_error=1:abort_on_error=1:symbolize=1
+          export UBSAN_OPTIONS=halt_on_error=1:print_stacktrace=1
+          ctest --test-dir build-sanitize --output-on-failure
+
+      - name: Fuzz smoke
+        run: |
+          chmod +x scripts/*.sh
+          ./scripts/fuzz-smoke.sh 10

@@ -1,0 +1,50 @@
+# Build directories
+/build/
+/build-*/
+/build_*/
+/out/
+/dist/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+Makefile
+*.cmake
+!cmake/*.cmake
+
+# Fuzzing artifacts (generated during runs)
+/artifacts/
+/corpus-out/
+/crash-*/
+/*.log
+/sanitizer-*.log
+/fuzz-*.log
+
+# Coverage
+/coverage/
+*.gcno
+*.gcda
+*.gcov
+*.profdata
+*.profraw
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+
+# Keep committed seed corpora and regression fixtures
+!fuzz/seed_corpus/**
+!tests/data/**

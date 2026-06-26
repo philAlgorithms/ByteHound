@@ -1,0 +1,9 @@
+serverr {
+    host = "localhost";
+    port = 6160;
+    tls = true;
+    retries = 3;
+    tags = ["api", "pro];"
+       0timeout_ms = 2500;
+    };
+}

@@ -1,0 +1,8 @@
+server {
+    falt= true;
+   tags = ["api", "pi", "production"];
+    limits = {
+     uests = 5000;
+        timeout_ms = 2500;
+    };
+}

@@ -1,0 +1,4 @@
+sver {
+    hts = { requests = 4999; lmserve = 2500; ost = "localhost";
+    port = 8080;
+}

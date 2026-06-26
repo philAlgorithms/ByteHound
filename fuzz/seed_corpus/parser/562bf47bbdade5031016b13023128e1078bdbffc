@@ -1,0 +1,3 @@
+app {
+  limits = { res = 4998; timet_ms = 25;
+}

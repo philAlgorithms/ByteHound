@@ -1,0 +1,11 @@
+server {
+    host = "localhost";
+    port = 8080;
+    tls = true;
+    retries = 3;
+    tags = ["api", "protion"];
+    limits = {
+        requests = 5000;
+        timeout_ms = 2500;
+    };
+}

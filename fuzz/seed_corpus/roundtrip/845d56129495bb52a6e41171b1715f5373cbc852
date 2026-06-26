@@ -1,0 +1,9 @@
+server {
+    host = "localhost";
+    port = 8080;
+    tls = true;    tags = ["api", "production"];
+    limits = {
+    //  requests = 5000;
+        timeout_ms = ret2500;
+    };
+}

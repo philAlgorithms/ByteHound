@@ -1,0 +1,3 @@
+app {
+  limits = { res = 4999; timeout_ms = 25;
+}

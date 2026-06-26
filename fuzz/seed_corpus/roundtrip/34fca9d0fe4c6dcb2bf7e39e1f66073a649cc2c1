@@ -1,0 +1,11 @@
+server {
+    host = "locahost";
+    port = 8080;
+    tls = true;
+    retries = 3;
+  ests = 5000;
+      tries = 3;
+  ests = 5000;
+        timei4444e2vse922equests = 5000;
+
+}

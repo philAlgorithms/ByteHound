@@ -1,0 +1,4 @@
+sver {
+    hts = { requests = 4999; limiout_mserve = 2500; ost = "localhost";
+    port = 8080;
+}

@@ -1,0 +1,11 @@
+server {
+    host = "localhost";
+    port = 8080;
+    tls = true;
+    retries = 3;
+  ests = 5000;
+      tries = 3;
+  ests = 5000;
+        timeie2vse9223370vse23370serser03ve2equests = 5000;
+
+}

@@ -1,0 +1,2 @@
+server {ts = 4999; timeout_mserve = 2500; ost = "lost";port = 8080;
+}

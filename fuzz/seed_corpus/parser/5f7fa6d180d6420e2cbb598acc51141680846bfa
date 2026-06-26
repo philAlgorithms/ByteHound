@@ -1,0 +1,4 @@
+serve{
+    host = "localhost";
+    port = 4040;
+}

@@ -1,0 +1,7 @@
+server {
+    
+    //tags = ["api", "-2.5e-4io2"];
+    limits = {
+    //  requests = 5000;
+        timeout_ms = ret250A0;
+    }
